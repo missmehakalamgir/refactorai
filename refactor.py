@@ -8,7 +8,7 @@ import re
 import random
 import plotly.express as px 
 import ast
-from radon.comlexity import cc_visit 
+from radon.complexity import cc_visit 
 from streamlit.lottie import st_lottie
 import requests
 
