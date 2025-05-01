@@ -81,7 +81,7 @@ def quality_score(issue_count):
 
 def extract_imports(code):
     tree = ast.parse(code)
-    imports =[node.name[0].name for node in tree.body if isinstance(node, ast.Import)]
+    imports =[node.names[0].name for node in tree.body if isinstance(node, ast.Import)]
     return imports
 
 
