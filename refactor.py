@@ -40,7 +40,7 @@ with col1:
 
 with col2:
     if animation:
-        st_lottie(animation, height=200,speed=1, loop=True)
+        st_lottie(animation, height=200, speed=1, loop=True)
     else:
         st.warning("⚠️ Failed to load animation")
 
