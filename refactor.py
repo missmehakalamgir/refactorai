@@ -9,7 +9,7 @@ import random
 import plotly.express as px 
 import ast
 from radon.complexity import cc_visit 
-from streamlit.lottie import st_lottie
+from streamlit_lottie import st_lottie
 import requests
 
 st.set_page_config(page_title="Refactor Pro Application", page_icon= "🔖", layout="wide")
