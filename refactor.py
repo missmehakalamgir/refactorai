@@ -90,8 +90,9 @@ def plot_import_usage(imports):
     colors = [f"rgb({random.randint(50, 255)}, {random.randint(50,255)})" for _ in import_counts]
     fig = px.bar(x=list(import_counts.keys()), y=list(import_counts.values()),
                  labels={'x':'Used Modules', 'y': 'Usage Counts'},
-                 title="Modules Usage", color=list(import_counts.keys()), color_discrete_sequence=colors)
-    fig.update_layout(bargrp=0.3)
+                 title="Modules Usage", color=list(import_counts.keys()), 
+                 color_discrete_sequence=colors)
+    fig.update_layout(bargap=0.3)
     st.plotly_chart(fig, use_container_width=True)
 
 def download_button(code):
