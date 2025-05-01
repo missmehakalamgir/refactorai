@@ -61,7 +61,7 @@ with tabs[0]:
 def refactor_code(code):
     sorted_code = isort.code(code)
     formatted_code = black.format_file_contents(sorted_code, fast=False, mode=black.Mode())
-    with tempfile.NamedTemporyFile(delete=False, suffix="py", mode="w") as tmp_file:
+    with tempfile.NamedTemperoryFile(delete=False, suffix=".py", mode="w") as tmp_file:
         tmp_file.write(formatted_code)
         tmp_path = tmp_file.name
     result = subprocess.run(["flake8", tmp_path], capture_output=True,text=True)
