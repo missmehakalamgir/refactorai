@@ -1,15 +1,15 @@
-import streamlit as st
-import black
-import isort
-import subprocess
-import tempfile
-import base64
-import re
-import random
-import plotly.express as px 
-import ast
-from radon.complexity import cc_visit
-from streamlit.lottie import st_lottie
+import streamlit as st 
+import black 
+import isort 
+import subprocess 
+import tempfile  
+import base64  
+import re  
+import plotly.express as px
+import random 
+import ast  
+from radon.complexity import cc_visit  
+from streamlit_lottie import st_lottie  
 import requests
 
 st.set_page_config(page_title="Refactor Pro Application", page_icon= "🔖", layout="wide")
