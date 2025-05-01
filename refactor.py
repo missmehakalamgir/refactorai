@@ -1,15 +1,15 @@
-import streamlit as st 
-import black 
-import isort 
-import subprocess 
-import tempfile  
-import base64  
-import re  
-import plotly.express as px
-import random 
-import ast  
-from radon.complexity import cc_visit  
-from streamlit_lottie import st_lottie  
+import streamlit as st
+import black
+import isort
+import subprocess
+import tempfile
+import base64
+import re
+import random
+import plotly.express as px 
+import ast
+from radon.comlexity import cc_visit 
+from streamlit.lottie import st_lottie
 import requests
 
 st.set_page_config(page_title="Refactor Pro Application", page_icon= "🔖", layout="wide")
@@ -109,9 +109,6 @@ def optimize_code_suggestions(code):
 
     if "for i in range(len(list))" in code:
         suggestions.append("Use 'for item in list' instead of 'for i in range(len(list))' for better readability.")
-
-
-
     if "== None" in code:
         suggestions.append("Use 'is None' instead of '== None' for better performance and readability.")
     if len(re.findall(r"print\(", code)) > 3:
